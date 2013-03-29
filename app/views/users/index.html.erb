@@ -1,0 +1,10 @@
+
+<% @users.each do |user| %>
+<ul>
+	<li><%= user.username %></li>
+
+</ul>
+
+<% end %>
+
+<%= link_to "Crear usuario", registro_path %>

@@ -1,0 +1,26 @@
+<% provide(:title, 'App - Registro') %>
+
+<h1>Crea Usuario</h1>
+
+<%= form_for(@user) do |f| %>
+
+<%= render 'common/form_errors', object: @user  %>
+
+	<p>
+		<%= f.label :username, "Usuario" %><br />
+		<%= f.text_field :username %>
+	</p>
+
+	<p>
+		<%= f.label :password, "Password" %><br />
+		<%= f.password_field :password %>
+	</p>
+
+	<p>
+		<%= f.label :password_confirmation, "Confirma password" %><br />
+		<%= f.password_field :password_confirmation %>
+	</p>
+
+	<p><%= f.submit "Registrate" %></p>	
+
+<% end %>
